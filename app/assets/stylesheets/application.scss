@@ -5,12 +5,13 @@
 }
 
 .hero{
-	background:url('MLKpic.jpg');
+
 	background-size: cover;
 	height:350px;
 	
 	color:black;
 	font-family: freshman; 
+	z-index: -1;
 }
 
 .header {
@@ -45,3 +46,16 @@ a {
 .nav {
 	text-align: right;
 }
+
+#change {
+	margin-left: 15%;
+}
+
+h1 {
+	font-size: 3.5rem;
+	color: #575757;
+}
+
+
+
+

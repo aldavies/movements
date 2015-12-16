@@ -3,3 +3,4 @@
 //= require turbolinks
 //= require tether
 //= require bootstrap
+//= require index.js 
