@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="index.scss">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -9,17 +9,16 @@
     </ol>
 
     <!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
+<div class="carousel-inner" role="listbox" style="border: 2px solid black">
   <% @posts.each do |post| %>
 
     <% if post.id == 1 %>
       <div class="carousel-item active">
-        <img id="black" class="pics"src='https://therideordieprojectdotcom.files.wordpress.com/2014/12/black-lives-matter.jpg'>
+        <img id="black" class="pics" src="<%= post.img_url %>">
 
             <div class="carousel-caption">
-              <h3><%= post.title %></h3>
-              <p><%= post.comments %></p>
-
+              <h3 style="color:blue"><%= post.title %></h3>
+              <p style="color:black"><%= post.comments %></p>
             </div>
           
       </div>
@@ -27,10 +26,10 @@
     <% else %>
 
       <div class="carousel-item">
-        <img id="other" class="pics" src="http://placehold.it/350x150">
+        <img id="other" class="pics" src="http://photos.cntraveler.com/2014/09/29/5429c32b425f183f61bf7316_new-york-city-skyline.jpg">
         <div class="carousel-caption">
-          <h3><%= post.title %></h3>
-          <p><%= post.comments %></p>
+          <h3 style="color:blue"><%= post.title %></h3>
+          <p style="color:black"><%= post.comments %></p>
         </div>
       </div> 
 
@@ -52,10 +51,37 @@
     </a>
   </div>
 
-          
-<h1>Movements</h1>
+<section style="margin-top: 4px">
+    <div class="container">
+      <div class="row">
+    <div class="col-xs-4">
+      <%= image_tag("people.png", :alt => "people") %>
+      <h3>Make a Difference</h3>
+        <p>Work on solutions with other people that are passionate about the same issues you are. Make a difference by collectively coming together to make change in the world.
+        </p>
+    </div>
 
-  <table>
+    <div class="col-xs-4">
+      <%= image_tag("leaders.png", :alt => "leaders") %>
+      <h3>Get connected with leaders able to make change </h3>
+        <p>Connect to political, social, or thought leaders that are looking to make change and connect to the people that support them. 
+        </p>
+    </div>
+
+      <div class="col-xs-4">
+      <%= image_tag("community.png", :alt => "community") %>
+      <h3>Form a Community!</h3>
+        <p>Connect with people that are like minded and share the experience. Bring awareness to your cause, and be the change you want to see in the world.
+        </p>
+
+        </div>
+      </div>
+    </div>
+          
+<h1 style="text-align:center; color:#3333ff; margin-top:10px">Join a Movement</h1>
+
+  <table style="margin-left:25%; border-collapse:separate; 
+border-spacing:10px">
     <thead>
       <tr>
         <th>Movements</th>
@@ -79,5 +105,5 @@
 
   <br>
 
-  <%= link_to 'New Post', new_post_path %>
+  <button style="margin-left:45%; height:90px; width:150px"><%= link_to 'New Movement', new_post_path %></button>
 
